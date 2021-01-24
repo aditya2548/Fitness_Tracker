@@ -12,8 +12,8 @@ class DataModel {
   static const CONFIRM_PASSWORD = "Confirm Password";
   static const FORGOT_PASSWORD = "Forgot Password ?";
   static const LOGIN = "Login ?";
-  static const HELLO_FRIEND = "Hello, friend!";
-  static const LETS_GET_STARTED = "Let's get started";
+  static const HELLO_FRIEND = "Hello, buddy!";
+  static const LETS_GET_STARTED = "Let's get it rolling";
   static const NAME = "Name";
   static const INVALID_NAME = "Invalid Name!";
   static const MOBILE_NUMBER = "Mobile Number";
