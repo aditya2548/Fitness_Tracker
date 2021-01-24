@@ -1,3 +1,5 @@
+import '../theme/color_scheme.dart';
+
 import '../screens/home_screen.dart';
 import 'package:flare_flutter/flare_actor.dart';
 
@@ -28,7 +30,7 @@ class SignUpScreen extends StatelessWidget {
               },
               child: Container(
                 padding: EdgeInsets.all(10),
-                color: Colors.pink[900],
+                color: CustomColor.buttonColor[900],
                 child: Text(
                   DataModel.LOGIN,
                   style: TextStyle(
@@ -127,17 +129,20 @@ class _SignupAuthCardState extends State<SignupAuthCard> {
       children: [
         Center(
           child: Container(
-            height: 170,
-            width: 170,
             padding: EdgeInsets.symmetric(vertical: 5),
             child: CircleAvatar(
-              backgroundColor: Colors.grey[900],
-              child: ClipOval(
-                child: FlareActor(
-                  "assets/teddy.flr",
-                  alignment: Alignment.center,
-                  fit: BoxFit.contain,
-                  animation: animationType,
+              radius: 88,
+              backgroundColor: Colors.lightBlue[200],
+              child: CircleAvatar(
+                backgroundColor: Colors.grey[900],
+                radius: 85,
+                child: ClipOval(
+                  child: FlareActor(
+                    "assets/teddy.flr",
+                    alignment: Alignment.center,
+                    fit: BoxFit.contain,
+                    animation: animationType,
+                  ),
                 ),
               ),
             ),
@@ -288,7 +293,7 @@ class _SignupAuthCardState extends State<SignupAuthCard> {
                 onPressed: () {
                   _submit();
                 },
-                backgroundColor: Colors.pink[900],
+                backgroundColor: CustomColor.buttonColor[900],
                 child: Icon(
                   Icons.arrow_forward,
                   color: Theme.of(context).highlightColor,

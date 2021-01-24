@@ -1,3 +1,4 @@
+import '../theme/color_scheme.dart';
 import 'package:flare_flutter/flare_actor.dart';
 
 import '../screens/home_screen.dart';
@@ -30,7 +31,7 @@ class LoginScreen extends StatelessWidget {
                 },
                 child: Container(
                   padding: EdgeInsets.all(10),
-                  color: Colors.pink[900],
+                  color: CustomColor.buttonColor[900],
                   child: Text(
                     DataModel.SIGNUP,
                     style: TextStyle(
@@ -127,16 +128,19 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
         Center(
           child: Container(
             margin: EdgeInsets.symmetric(vertical: 5),
-            height: 170,
-            width: 170,
             child: CircleAvatar(
-              backgroundColor: Colors.grey[900],
-              child: ClipOval(
-                child: FlareActor(
-                  "assets/teddy.flr",
-                  alignment: Alignment.center,
-                  fit: BoxFit.contain,
-                  animation: animationType,
+              radius: 88,
+              backgroundColor: Colors.lightBlue[200],
+              child: CircleAvatar(
+                radius: 85,
+                backgroundColor: Colors.grey[900],
+                child: ClipOval(
+                  child: FlareActor(
+                    "assets/teddy.flr",
+                    alignment: Alignment.center,
+                    fit: BoxFit.contain,
+                    animation: animationType,
+                  ),
                 ),
               ),
             ),
@@ -248,7 +252,7 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
                   onPressed: () {
                     _submit();
                   },
-                  backgroundColor: Colors.pink[900],
+                  backgroundColor: CustomColor.buttonColor[900],
                   child: Icon(
                     Icons.arrow_forward,
                     color: Theme.of(context).highlightColor,
@@ -266,8 +270,9 @@ class _LoginAuthCardState extends State<LoginAuthCard> {
                 child: Text(
                   DataModel.FORGOT_PASSWORD,
                   style: TextStyle(
-                      // fontSize: 12,
-                      color: Theme.of(context).accentColor),
+                    // fontSize: 12,
+                    color: CustomColor.buttonColor,
+                  ),
                 ),
               ),
             ),
